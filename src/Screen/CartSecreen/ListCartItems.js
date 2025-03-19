@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import { View, Text, TouchableOpacity, Image, ActivityIndicator, StatusBar } from 'react-native';
-// import { ListItem } from 'native-base';
 import Icon from 'react-native-vector-icons/Ionicons';
 // import * as Speech from 'expo-speech';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -120,7 +119,7 @@ const ListCartItems = (props) => {
                     <TouchableOpacity onPress={() => deleteItemHandler()}
                         style={{ backgroundColor: "orange", flexDirection: "row", borderColor: "grey", borderRadius: 5, borderWidth: 1, justifyContent: "center", alignItems: "center", elevation: 2, height: 35, width: 150 }}>
                         <Icon onPress={() => deleteItemHandler()}
-                            size={30} name="ios-trash" color="#fff" />
+                            size={30} name="trash" color="#fff" />
                         <Text style={{ paddingHorizontal: 4, fontSize: 16, color: "#fff" }}>
                             Remove
                         </Text>

@@ -27,7 +27,25 @@ import ProductDetail from "../../Screen/ProductScreen/ProductDetail";
 import ScanScreen from "../../Screen/ScanScreen";
 import { Text, TouchableOpacity, View } from "react-native";
 import Icon from 'react-native-vector-icons/Ionicons';
-// import { ZegoUIKitPrebuiltLiveStreamingFloatingMinimizedView } from '@zegocloud/zego-uikit-prebuilt-live-streaming-rn';
+import { ZegoUIKitPrebuiltLiveStreamingFloatingMinimizedView } from '@zegocloud/zego-uikit-prebuilt-live-streaming-rn';
+import HostPage from "../../Screen/liveVideo/HostPage";
+import AudiencePage from "../../Screen/liveVideo/AudiencePage";
+import LiveVideo from "../../Screen/liveVideo";
+import Wallet from "../../Screen/wallet/walletHome";
+import AddPayment from "../../Screen/wallet/addMoney";
+import ProductCategories from "../../Screen/ProductCategories/productCategories";
+import CategoryProductsList from "../../Screen/ProductCategories/categoryProducts";
+import ShopCategories from "../../Screen/ShopCategories/shopCategories";
+import CategoryShopList from "../../Screen/ShopCategories/categoryShops";
+import Cart from "../../Screen/CartSecreen/Cart";
+import ShippingAddress from "../../Screen/CartSecreen/Address1";
+import BillingAddress from "../../Screen/CartSecreen/Address2";
+import Checkout from "../../Screen/CartSecreen/checkout";
+import CartDetail from "../../Screen/CartSecreen/cartDetail";
+import Failed from "../../Screen/CartSecreen/failed";
+import Orders from "../../Screen/OrderScreen/Orders";
+import OrderDetail from "../../Screen/OrderScreen/orderDetail";
+import { BusinessDrawerNavigator } from "../BusinessRoutes";
 
 
 const BNBStackNav = createNativeStackNavigator();
@@ -108,10 +126,94 @@ export const WalletStack = () => {
         headerShown: false,
       }}>
       <WalletStackNav.Screen name="wallet" component={Wallet} />
-      <WalletStackNav.Screen name="addMoney" component={AddMoney} />
+      <WalletStackNav.Screen name="addMoney" component={AddPayment} />
     </WalletStackNav.Navigator>
   );
 };
+
+const ProductCategory = createNativeStackNavigator();
+export const ProductCategoryStack = () => {
+  return (
+    <ProductCategory.Navigator
+      initialRouteName="productCategories"
+      screenOptions={{
+        headerShown: false,
+      }}>
+      <ProductCategory.Screen
+        name="productCategories"
+        component={ProductCategories}
+      />
+      <ProductCategory.Screen
+        name="categoryProducts"
+        component={CategoryProductsList}
+      />
+      <ProductCategory.Screen name="productdetail2" component={ProductDetail} />
+      <ProductCategory.Screen
+        name="productContent"
+        component={ProductContent}
+      />
+    </ProductCategory.Navigator>
+  );
+};
+
+
+const ShopCategory = createNativeStackNavigator();
+export const ShopCategoryStack = () => {
+  return (
+    <ShopCategory.Navigator
+      initialRouteName="shopCategories"
+      screenOptions={{
+        headerShown: false,
+      }}>
+      <ShopCategory.Screen name="shopCategories" component={ShopCategories} />
+      <ShopCategory.Screen name="categoryShops" component={CategoryShopList} />
+      <ShopCategory.Screen name="shopdetail2" component={ShopDetail} />
+      <ShopCategory.Screen name="productdetail3" component={ProductDetail} />
+      <ShopCategory.Screen name="productContent4" component={ProductContent} />
+    </ShopCategory.Navigator>
+  );
+};
+
+
+const CartStackNav = createNativeStackNavigator();
+export const CartStack = () => {
+  return (
+    <CartStackNav.Navigator
+      initialRouteName="cart"
+      screenOptions={{
+        headerShown: false,
+      }}>
+      <CartStackNav.Screen name="cart" component={Cart} />
+      <CartStackNav.Screen name="shipping" component={ShippingAddress} />
+      <CartStackNav.Screen name="billing" component={BillingAddress} />
+      <CartStackNav.Screen name="checkout" component={Checkout} />
+      <CartStackNav.Screen name="cartDetail" component={CartDetail} />
+      <CartStackNav.Screen name="payment" component={Payment} />
+      <CartStackNav.Screen name="PaymentMethod" component={PaymentMethod} />
+      <CartStackNav.Screen
+        name="PaymentMethodHotel"
+        component={PaymentMethodHotel}
+      />
+      <CartStackNav.Screen name="thankYou" component={ThankYou} />
+      <CartStackNav.Screen name="failed" component={Failed} />
+    </CartStackNav.Navigator>
+  );
+};
+
+const Order = createNativeStackNavigator();
+export const OrderStack = () => {
+  return (
+    <Order.Navigator
+      initialRouteName="order"
+      screenOptions={{
+        headerShown: false,
+      }}>
+      <Order.Screen name="order" component={Orders} />
+      <Order.Screen name="orderDetail" component={OrderDetail} />
+    </Order.Navigator>
+  );
+};
+
 
 const ShopStackNav = createNativeStackNavigator();
 export const ShopStack = () => {
@@ -154,7 +256,7 @@ const RouteStack = () => {
     <NavigationContainer ref={navigationRef}>
       <Stack.Navigator
         initialRouteName="Landing"
-        // initialRouteName="RegisterProfile"
+        // initialRouteName="BusinessApp"
         screenOptions={{
           headerShown: false
         }}>
@@ -169,8 +271,9 @@ const RouteStack = () => {
         <Stack.Screen name="Profile" component={ProfileScreen} />
         <Stack.Screen name="Barber" component={BarberScreen} />
         <Stack.Screen name="Product" component={ProductScreen} />
+        <Stack.Screen name="BusinessApp" component={BusinessDrawerNavigator} />
       </Stack.Navigator>
-      {/* <ZegoUIKitPrebuiltLiveStreamingFloatingMinimizedView /> */}
+      <ZegoUIKitPrebuiltLiveStreamingFloatingMinimizedView />
     </NavigationContainer>
   )
 }

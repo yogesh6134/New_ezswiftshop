@@ -13,6 +13,12 @@ export const IMAGES = {
     Home: require('./images/homeIcon.png'),
     hicli: require('./images/hicli.png'),
     hiclipart: require('./images/hiclipart.png'),
+    shopingBag: require('./images/shopingBag.jpg'),
+    fruitSalad: require('./images/Fruit-salad.jpg'),
+    // hicli: require('./images/hicli.png'),
+
+
+    
 
 
 

@@ -45,7 +45,7 @@ export default function ShopDetail(props) {
 					<Image style={styles.imageStyle} source={{ uri: shopdata.shop_image }} />
 					<Text style={styles.textStyle1}>{shopdata.shop_name}</Text>
 					<View style={{ flexDirection: "row", alignItems: 'center' }}>
-						<Icon name="ios-pin" size={20} />
+						<Icon name="pin" size={20} />
 						<Text style={styles.textStyle2}>{shopdata.town_city}</Text>
 					</View>
 					<View style={{ flexDirection: "row", alignItems: 'center' }}>
@@ -73,7 +73,7 @@ export default function ShopDetail(props) {
 						<Image style={styles.imageStyle} source={{ uri: shopdata.shop_image }} />
 						<Text style={styles.textStyle1}>{shopdata.shop_name}</Text>
 						<View style={{ flexDirection: "row", alignItems: 'center' }}>
-							<Icon color="orange" name="ios-pin" size={20} />
+							<Icon color="orange" name="pin" size={20} />
 							<Text style={styles.textStyle2}>{shopdata.town_city}</Text>
 						</View>
 						<View style={{ flexDirection: "row", alignItems: 'center' }}>

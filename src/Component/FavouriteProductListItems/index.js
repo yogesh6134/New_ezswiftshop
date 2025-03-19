@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { View, Text, TouchableOpacity, Button, Image, ActivityIndicator, StatusBar } from 'react-native';
-// import { ListItem } from 'native-base';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 // import * as Speech from 'expo-speech';

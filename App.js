@@ -11,7 +11,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import RouteStack from './src/Routes/RouteStack';
 import Loader from './src/component/Loader';
 import InternetScreen from './src/Screen/InternetScreen';
-
+import { PaperProvider } from 'react-native-paper';
 
 const App = () => {
   const [isConnected, setIsConnected] = useState(true);
@@ -49,7 +49,10 @@ const App = () => {
             backgroundColor={COLORS.white}
             barStyle="dark-content"
           />
-          <RouteStack />
+          {/* <RouteStack /> */}
+          <PaperProvider>
+      <RouteStack />
+    </PaperProvider>
           <Loader />
           <FlashMessage position="top" />
         </>

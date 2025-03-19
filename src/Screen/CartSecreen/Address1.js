@@ -14,7 +14,6 @@
 // import { getDistance } from 'geolib';
 // import GetLocation from 'react-native-get-location';
 // import { Marker } from 'react-native-maps';
-// // import { position } from 'native-base/lib/typescript/theme/styled-system';
 
 // const LOCATION_TASK_NAME = "background-location-task";
 

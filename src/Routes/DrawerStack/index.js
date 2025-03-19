@@ -8,7 +8,10 @@ import TabNavigation, { ProductStack } from '../TabNavigation';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { COLORS } from '../../utils/color';
-import { BNBStack, LiveStreameStack, ShopStack, WalletStack } from '../RouteStack';
+import { BNBStack, CartStack, LiveStreameStack, OrderStack, ProductCategoryStack, ShopCategoryStack, ShopStack, WalletStack } from '../RouteStack';
+import Logout from '../../Screen/Authentication/Logout';
+import Aboutus from '../../Screen/AboutUsScreen';
+import BusinessLogin from '../../Screen/BusinessScreen/authentication/Login';
 
 const Drawer = createDrawerNavigator();
 
@@ -87,7 +90,7 @@ const DrawerScreen = () => {
                 }}
             />
 
-            {/* <Drawer.Screen
+            <Drawer.Screen
               name="Product Categories"
               component={ProductCategoryStack}
               options={{
@@ -96,8 +99,8 @@ const DrawerScreen = () => {
                   <MaterialCommunityIcons name="sale" size={25} color={'#fff'} />
                 ),
               }}
-            /> */}
-            {/* <Drawer.Screen
+            />
+            <Drawer.Screen
               name="Shop Categories"
               component={ShopCategoryStack}
               options={{
@@ -106,8 +109,8 @@ const DrawerScreen = () => {
                   <MaterialCommunityIcons name="store" size={25} color={'#fff'} />
                 ),
               }}
-            /> */}
-            {/* <Drawer.Screen
+            />
+            <Drawer.Screen
               name="Cart"
               component={CartStack}
               options={{
@@ -116,7 +119,7 @@ const DrawerScreen = () => {
                   <MaterialCommunityIcons name="cart" size={25} color={'#fff'} />
                 ),
               }}
-            /> */}
+            />
             <Drawer.Screen
                 name="Profile"
                 component={ProfileScreen}
@@ -141,7 +144,7 @@ const DrawerScreen = () => {
                 ),
               }}
             />
-            {/* <Drawer.Screen
+            <Drawer.Screen
               name="Orders"
               component={OrderStack}
               options={{
@@ -154,22 +157,8 @@ const DrawerScreen = () => {
                   />
                 ),
               }}
-            /> */}
-            {/* <Drawer.Screen
-              name="Scan Product"
-              component={Scanner}
-              options={{
-                drawerLabel: 'Scan Product',
-                drawerIcon: ({ tintColor }) => (
-                  <MaterialCommunityIcons
-                    name="qrcode-scan"
-                    size={25}
-                    color={'#fff'}
-                  />
-                ),
-              }}
-            /> */}
-
+            />
+           
             <Drawer.Screen
                 name="Live Video"
                 component={LiveStreameStack}
@@ -205,7 +194,7 @@ const DrawerScreen = () => {
             />
 
 
-            {/* <Drawer.Screen
+            <Drawer.Screen
               name="Business"
               component={BusinessLogin}
               options={{
@@ -214,8 +203,8 @@ const DrawerScreen = () => {
                   <MaterialIcons name="business-center" size={25} color={'#fff'} />
                 ),
               }}
-            /> */}
-            {/* <Drawer.Screen
+            />
+            <Drawer.Screen
               name="Logout"
               component={Logout}
               options={{
@@ -224,8 +213,8 @@ const DrawerScreen = () => {
                   <MaterialCommunityIcons name="logout" size={25} color={'#fff'} />
                 ),
               }}
-            /> */}
-            {/* <Drawer.Screen
+            />
+            <Drawer.Screen
               name="About us"
               component={Aboutus}
               options={{
@@ -234,11 +223,11 @@ const DrawerScreen = () => {
                   <MaterialCommunityIcons
                     name="information"
                     size={25}
-                    color={tintColor}
+                    color={"#fff"}
                   />
                 ),
               }}
-            /> */}
+            />
         </Drawer.Navigator>
     );
 }

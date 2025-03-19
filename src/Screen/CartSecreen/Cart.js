@@ -1,14 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, ActivityIndicator, StatusBar, NativeEventEmitter,NativeModules } from 'react-native';
-// import { ListItem, Footer, FooterTab, Button } from 'native-base';
 import axios from 'axios';
 import ListCartItem from './ListCartItems';
 import Icon from 'react-native-vector-icons/Ionicons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useIsFocused} from '@react-navigation/native';
 import Tts from 'react-native-tts';
+import { IMAGES } from '../../assets';
 // import * as Speech from 'expo-speech'
-let image = require('../assets/FAVPNG_shopping-bags-trolleys-paper-bag_AKThabaV.png')
 
 
 const Cart = (props) => {
@@ -87,7 +86,7 @@ const Cart = (props) => {
             <View style={{ flex: 1 }}>
                 <View style={styles.textStyle}>
                     <TouchableOpacity  >
-                        <Icon size={40} name="ios-close" color='#eee' onPress={() => props.navigation.goBack(null)} />
+                        <Icon size={40} name="close" color='#eee' onPress={() => props.navigation.goBack(null)} />
                     </TouchableOpacity>
                     <Text style={{ marginLeft: 10, color: "#eee", fontSize: 15, fontWeight: 'bold' }}>MY BAG</Text>
                 </View>
@@ -104,7 +103,7 @@ const Cart = (props) => {
         return (
             <View style={{ flex: 1 }}>
                 <View style={styles.textStyle}>
-                    <Icon size={50} name="ios-close" color='#eee'
+                    <Icon size={50} name="close" color='#eee'
                         style={{ marginLeft: 10 }}
                         onPress={() => { props.navigation.goBack(null) }} />
                     <Text style={{ marginLeft: 10, color: "#eee", fontSize: 15, fontWeight: 'bold' }}>MY BAG</Text>
@@ -143,7 +142,7 @@ const Cart = (props) => {
         return (
             <View style={{ flex: 1 }}>
                 <View style={styles.textStyle}>
-                    <Icon size={50} name="ios-close" color='#eee'
+                    <Icon size={50} name="close" color='#eee'
                         style={{ marginLeft: 10 }}
                         onPress={() => { props.navigation.goBack(null) }} />
                     <Text style={{ marginLeft: 10, color: "#eee", fontSize: 15, fontWeight: 'bold' }}>MY BAG</Text>
@@ -151,7 +150,7 @@ const Cart = (props) => {
 
                 <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
 
-                    <Image style={{ height: 200, width: 200 }} source={image} />
+                    <Image style={{ height: 200, width: 200 }} source={IMAGES.shopingBag} />
 
                     <Text style={{ fontSize: 25, color: "#17baa1" }}>Nothing in the bag</Text>
                     <TouchableOpacity onPress={() => { props.navigation.navigate('App', { screen: 'Shops' }) }}>

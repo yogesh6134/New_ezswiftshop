@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import { View, Text, TouchableOpacity, Image, ActivityIndicator, StatusBar } from 'react-native';
-// import { ListItem } from 'native-base';
 import Icon from 'react-native-vector-icons/Ionicons';
 // import * as Speech from 'expo-speech';
 import AsyncStorage from '@react-native-async-storage/async-storage';

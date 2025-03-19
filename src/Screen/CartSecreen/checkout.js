@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, StyleSheet, TextInput, BackHandler, ScrollView, Platform, TouchableOpacity, ActivityIndicator, StatusBar, NativeEventEmitter, NativeModules } from 'react-native';
-// import { View, Footer, FooterTab, Button } from 'native-base';
 import axios from 'axios';
 import CheckoutList from './CheckoutList';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -193,7 +192,7 @@ const Checkout = (props) => {
         return (
             <View style={{ flex: 1 }}>
                 <View style={styles.textStyle}>
-                    <Icon size={30} name="ios-close" color='#eee' onPress={() => { props.navigation.navigate("index") }} />
+                    <Icon size={30} name="close" color='#eee' onPress={() => { props.navigation.navigate("index") }} />
                     <Text style={{ marginLeft: 10, color: "#eee", fontSize: 15, fontWeight: 'bold' }}>Order</Text>
                 </View>
                 <View style={styles.activitycontainer}>
@@ -210,7 +209,7 @@ const Checkout = (props) => {
 
             <View style={{ backgroundColor: "#eee", flex: 1 }}>
                 <View style={styles.textStyle}>
-                    <Icon size={30} name="ios-close" color='#eee' onPress={() => { props.navigation.navigate("cart") }} />
+                    <Icon size={30} name="close" color='#eee' onPress={() => { props.navigation.navigate("cart") }} />
                     <Text style={{ marginLeft: 10, color: "#eee", fontSize: 15, fontWeight: 'bold' }}>Order</Text>
                 </View>
                 <ScrollView>

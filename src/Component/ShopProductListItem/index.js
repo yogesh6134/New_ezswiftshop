@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Text, TouchableOpacity, View, Image, StyleSheet, Button } from 'react-native';
-// import { ListItem } from 'native-base';
 
 // props.navigation.navigate('productdetail2', { url: props.data.url })
 // props.navigation.navigate('Product Categories', { screen: 'productdetail2', params: { url: props.data.url } })

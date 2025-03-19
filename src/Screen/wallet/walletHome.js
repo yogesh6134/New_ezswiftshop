@@ -8,7 +8,6 @@ import { TextField } from 'react-native-material-textfield';
 // import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 // import * as Animatable from 'react-native-animatable';
 import Icon from 'react-native-vector-icons/Ionicons';
-import Toast from 'react-native-simple-toast';
 
 const Wallet = (props) => {
 
@@ -43,7 +42,7 @@ const Wallet = (props) => {
       props.navigation.navigate('addMoney', { id: data.id, amount: amount })
 
     } else {
-      Toast.show('AMOUNT SHOULD BE GREATER THAN 1 DOLLAR')
+      // Toast.show('AMOUNT SHOULD BE GREATER THAN 1 DOLLAR')
     }
   }
 
@@ -74,7 +73,7 @@ const Wallet = (props) => {
           <View style={{ height: 250, paddingVertical: 10, margin: 15, backgroundColor: '#17baa1', elevation: 2, borderRadius: 5 }}>
             <View style={{ flexDirection: 'row', alignItems: "center", justifyContent: "center" }}>
               <Icon style={{ color: "white", padding: 12 }}
-                size={100} name="ios-wallet"
+                size={100} name="wallet"
                 onPress={() => props.navigation.goBack()} />
               <Text style={{ fontSize: 35 }}>Wallet Money</Text>
             </View>
