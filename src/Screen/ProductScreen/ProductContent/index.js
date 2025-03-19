@@ -8,7 +8,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useIsFocused } from '@react-navigation/native';
 import Tts from 'react-native-tts';
-import ProductContentMap from '../../../Component/ProductContentMap';
+import ProductContentMap from '../../../component/ProductContentMap';
 import { COLORS } from '../../../utils/color';
 
 

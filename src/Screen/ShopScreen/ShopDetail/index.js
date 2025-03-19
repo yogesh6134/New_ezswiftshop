@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView, ActivityIn
 import axios from 'axios';
 import Icon from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import ShopProductListItem from '../../../Component/ShopProductListItem';
+import ShopProductListItem from '../../../component/ShopProductListItem';
 
 
 

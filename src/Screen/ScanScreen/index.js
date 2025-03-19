@@ -7,9 +7,9 @@ import {
   Dimensions,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import QRScanner from "../../Component/QRScanner";
+import QRScanner from "../../component/QRScanner";
 import { COLORS } from "../../utils/color";
-import Header from "../../Component/Header";
+import Header from "../../component/Header";
 const dWidth = Dimensions.get("window").width;
 
 const clr1 = "mediumseagreen";

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { TextInput, View, Text, Button, ScrollView, ActivityIndicator, StatusBar } from 'react-native';
 import axios from 'axios';
 import Icon from "react-native-vector-icons/Ionicons"
-import SearchShopList from '../../../Component/SearchShopList';
+import SearchShopList from '../../../component/SearchShopList';
 
 
 

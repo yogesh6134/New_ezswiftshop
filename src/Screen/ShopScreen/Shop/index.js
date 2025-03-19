@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, ScrollView, ActivityIndicator, StatusBar } from 'react-native';
 import axios from 'axios';
-import ShopHeader from '../../../Component/ShopHeader';
-import ListShop from '../../../Component/ShopList';
+import ShopHeader from '../../../component/ShopHeader';
+import ListShop from '../../../component/ShopList';
 
 
 

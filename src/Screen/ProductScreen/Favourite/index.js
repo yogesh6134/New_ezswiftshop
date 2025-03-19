@@ -3,7 +3,7 @@ import { View, Text, ActivityIndicator, ScrollView, StatusBar } from 'react-nati
 import axios from 'axios';
 import Icon from 'react-native-vector-icons/Ionicons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import FavouriteProductListItems from '../../../Component/FavouriteProductListItems';
+import FavouriteProductListItems from '../../../component/FavouriteProductListItems';
 
 
 export default function Favourite(props) {

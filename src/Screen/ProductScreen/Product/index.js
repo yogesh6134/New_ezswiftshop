@@ -2,10 +2,10 @@ import React, { useActionState } from 'react';
 import { View, Text, TouchableOpacity, FlatList, ScrollView, Button, ActivityIndicator, StatusBar } from 'react-native';
 import axios from 'axios';
 import styles from './styles';
-import ListProductItem from '../../../Component/ProductList';
-import Header from '../../../Component/Header';
 import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
 import { fetchProducts, ProductSelector } from '../../../redux/slice/ProductReducer';
+import Header from '../../../component/Header';
+import ListProductItem from '../../../component/ProductList';
 
 const ProductList = () => {
     const dispatch = useAppDispatch()

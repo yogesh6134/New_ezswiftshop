@@ -5,12 +5,12 @@ import NetInfo, { NetInfoState } from '@react-native-community/netinfo';
 import { setSignalStrength, setSignalType } from './src/redux/slice/loadingSlice';
 import SplashScreen from 'react-native-splash-screen';
 import FlashMessage from 'react-native-flash-message';
-import RouteStack from './src/Routes/RouteStack';
-import InternetScreen from './src/Screen/InternetScreen';
-import Loader from './src/Component/Loader';
 import { COLORS } from './src/utils/color';
 import { useAppDispatch } from './src/redux/hooks';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import RouteStack from './src/Routes/RouteStack';
+import Loader from './src/component/Loader';
+import InternetScreen from './src/Screen/InternetScreen';
 
 
 const App = () => {
@@ -61,3 +61,5 @@ const App = () => {
 };
 
 export default App;
+
+

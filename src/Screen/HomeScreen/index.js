@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Text, View, FlatList, ScrollView, Image } from 'react-native';
 import styles from './styles';
-import Header from '../../Component/Header';
+import Header from '../../component/Header';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
-import ListProductItem from '../../Component/ProductList';
+import ListProductItem from '../../component/ProductList';
 import { fetchProducts, ProductSelector } from '../../redux/slice/ProductReducer';
 import { IMAGES } from '../../assets';
 
