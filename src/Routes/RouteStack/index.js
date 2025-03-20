@@ -251,7 +251,6 @@ const Stack = createNativeStackNavigator();
 const RouteStack = () => {
   const getStore = store.getState();
   const { token } = getStore?.AuthReducer?.loginData || ""
-  // const {isLogedIn} = useAppSelector(AuthSelector);
   return (
     <NavigationContainer ref={navigationRef}>
       <Stack.Navigator
